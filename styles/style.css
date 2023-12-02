@@ -1,0 +1,225 @@
+.row{
+    align-content: center;
+        height: 100vh !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        margin-top: 20px !important;
+    margin-left: -20px !important;
+}
+.drop-area{
+    position: relative;
+}
+.game-area{
+    padding : 5px;
+    width: 718px !important;
+}
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+font-family: 'Preahvihear', sans-serif !important; 
+}
+.start_pole {
+        height: 718px;
+        width: 718px;
+        text-align: center;
+        position: relative;
+    }
+.form_container{
+        position:absolute;
+        left:50%;
+        top:10%;
+        margin-top: -50px;
+        margin-left: -250px;
+        margin-bottom:-20px; 
+    }
+#img_start_snake{
+    border-radius: 15px;
+    margin:50px;
+}
+input[type="text"]
+{
+    margin: 10px;
+    border: none;
+    border-radius:15px;
+    height: 50px;
+    padding-left: 20px;
+}
+input[type=submit]
+{
+    border:none;
+    background-color: red;
+    align-items: center;
+    border-radius:15px;
+    height: 50px;
+    color: #fff;
+    width: 95%;
+    margin-top: 10px;
+    background: linear-gradient(178deg, rgb(253, 44, 56) 3.3%, rgb(176, 2, 12) 98.4%);
+}
+.pole {
+    background: url(../images/back.jpg);
+    background-size:cover ;
+    height: 718px;
+    width: 718px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+
+    position: relative;
+}
+
+.kletka {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    position : relative;/*ASTAR*/
+
+}
+span {
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: #2a2195;
+    display: flex;
+    width: 17px;
+    height: 17px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.player1{
+    height: 40px;
+    width: 40px;
+    border: 1px solid;
+    border-radius: 100px;
+    background-image: url(../images/fox.png);
+    background-size: cover;
+    margin-bottom: 20.95;
+    position: absolute;
+    bottom: 6px;
+}
+.player2{
+     background: url(../images/panda.png); 
+     background-size:cover ;
+}
+
+
+.cubikfield {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+@keyframes moveAnimation {
+    from {
+        margin-bottom: 0; /* начальное значение margin */
+    }
+    to {
+        margin-bottom: 70px; /* конечное значение margin*/
+    }
+}
+
+.col-sm-3{
+    width: 200px !important;
+}
+
+.gamerfield{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+#drop{
+    position: absolute;
+    left:50%;/*ASTAR*/
+    margin-left: -50px;/*ASTAR*/
+    background-image: url(../images/cube.png);/*ASTAR*/
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+    bottom : 30%;/*ASTAR*/
+    margin-bottom: -50px;/*ASTAR*/
+
+}
+
+.rotated {
+    transform: rotate(360deg);
+}
+
+#drop-value{
+    position: absolute;
+    top: 30%;
+    margin-top: -50px;
+    height: 100px;
+    padding: 7px;
+    width: 90%;
+    border: 3px solid#fff;
+    text-align: center;
+    color: #002ae9;
+    font-size: 55px;
+    background: linear-gradient(3deg, rgba(194,194,255,1) 0%, rgb(97 255 233) 100%);
+    border-style: dotted;
+    border-radius: 20px;
+}
+
+.pname {
+    font-size: 40px;
+    color: #a2a2a2;
+    margin: 0;
+    height: 80px;
+    font-family: Pacifico;
+}
+
+
+.yourchance{
+    font-family: 'Preahvihear', sans-serif;
+    margin: 0;
+    visibility: hidden;
+    font-size: 14px;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activeplayer {
+    color: #009d00;
+}
+
+.activechance{
+    visibility:visible;
+}
+/* #FF5722; */
+
+.dropleft{
+    margin-right: 30px;
+}
+
+.winn {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: #99fff6;
+    z-index: 2;
+    color: #2f2f2f;
+    font-size: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Our first Hackathon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;500;600&family=Preahvihear&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="ooh" src="sounds/ooh-123103.mp3"></audio>
+    <audio id="ladder" src="sounds/ladder.wav"></audio>
+    <audio id="snakesound" src="sounds/snake.wav"></audio>
+    <audio id="backgroundsound" autoplay loop src="sounds/background.wav"></audio>
+
+    <div class="container">
+
+        <div class="cubikfield">
+            <div id="drop-value"></div>
+            <div id="drop"></div>
+        </div>
+
+        <div class="gamefield">  
+            <div id="pole" class="pole"></div>
+
+
+        </div>
+
+
+        <div class="gamerfield">
+            <div class="flex">
+                <p id="player1name" class="pname activeplayer">Fox</p>
+                <p id="p1chance" class="yourchance activechance">your chance has come</p>
+            </div>
+
+            <div class="flex">
+                <p id="player2name" class="pname">Panda</p>
+                <p id="p2chance" class="yourchance">your chance has come</p>
+            </div>
+
+        </div>
+
+    
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+mat2 = 1
+let marginBot2 = 71.8
+let randomnumber2 = getrandomnumber2()
+let positionbufferp122 = 1;
+let positionbufferp222 = 1;
+let activeplayer2 = 1;
+let curplayer2;
+let p12 = document.getElementById("player1")
+let p22 = document.getElementById("player2")
+if (activeplayer2 === 1) {
+    curplayer2 = p12
+} else if (activeplayer2 === 2){
+    curplayer2 = p22
+}
+console.log(curplayer2)
+// check current position---------------------
+let currentposition2 = 0
+
+function positionChecker2 (curplayer2) {  
+    const rect = curplayer2.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    const elementsUnderAbsolute = document.elementsFromPoint(x, y); 
+    elementsUnderAbsolute.forEach(div => {
+        if (div.classList.contains("kletka")) {
+         currentposition2 = Number(div.id)
+        }
+    });
+}
+
+
+function action2 () {
+
+    console.log(curplayer2, currentposition2)
+
+let randomnumber2 = getrandomnumber2() // создаем рандомное число
+let dvalue = document.getElementById("drop-value")
+dvalue.textContent = randomnumber2 // выводим рандомное число
+
+    let move = setInterval(function(){   // начинаем повторение
+         //получаем поизцию активного игрока
+         positionChecker2 (curplayer2)
+         // moover
+        if ([10,20,30,40,50,60,70,80,90].includes(currentposition2)) {
+            curplayer2.style.marginBot2tom = marginBot2+"px"
+            marginBot2 += 71.8
+        } else if ([11,12,13,14,15,16,17,18,19,31,32,33,34,35,36,37,38,39,51,52,53,54,55,56,57,58,59,71,72,73,74,75,76,77,78,79,91,92,93,94,95,96,97,98,99].includes(currentposition2)) {
+            curplayer2.style.marginLeft = mat2 +"px"
+            mat2--
+        }  else {
+            curplayer2.style.marginLeft = mat2 +"px"
+            mat2++
+        }
+          // stoper
+             if ( currentposition2 ===  randomnumber2 + positionbufferp122  || currentposition2 === 100 ) {
+
+                if (activeplayer2 === 1) {
+                    positionbufferp122 += randomnumber2
+                } else if (activeplayer2 === 2) {
+                    positionbufferp122 += randomnumber2
+                }
+                
+                curplayer2.style.marginLeft = mat2 + "px"
+                 clearInterval(move)
+        }
+        activeplayer2++ 
+        if (activeplayer2 > 2) {
+            activeplayer2 = 1
+        }
+},1)
+console.log(activeplayer2, curplayer2)
+
+}

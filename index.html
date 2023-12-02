@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakes and ladders</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;500;600&family=Preahvihear&display=swap" rel="stylesheet">    
+</head>
+<body>
+     <audio id="ooh" src="./sounds/ooh-123103.mp3"></audio> 
+     <audio id="ladder" src="./sounds/ladder.wav"></audio> 
+     <audio id="snakesound" src="./sounds/snake.wav"></audio> 
+    <audio id="backgroundsound" autoplay loop src="./sounds/background.wav"></audio>
+    <div id="win" class="winn"> 
+        <p id="winner" class="winner">FAFSFS</p>
+    </div>
+    <row class="row row_area">
+        <div id="drop-area_id" class="col-sm-3 drop-area dropleft">
+        </div>
+        <div id="game-area-id" class="col-sm-6 game-area">
+            <div id="start_pole" class="start_pole">
+                <div class="form_container">
+                    <h1>Snakes and Ladders</h1>
+                <img id="img_start_snake" src="./images/snake.png">
+                <form onSubmit="startGame(event)" id="form_id" name="form_name">
+                    <input type="text" id="Player_1_name" placeholder="Player 1">
+                    <input type="text" id="Player_2_name" placeholder="Player 2">
+                    </br>
+                    <input id="form_button" type="submit" value="Let's Start!">
+                </form>
+            </div>
+            </div>
+        </div>
+        <div id="player-area-id" class="col-sm-3 gamerfield">
+        </div>
+    </row>
+
+ 
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
